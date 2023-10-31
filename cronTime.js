@@ -1,6 +1,6 @@
 const { CronJob, CronTime } = require('cron');
 
-const job = new CronJob({
+const job = new CronJob.from({
     cronTime: '*/10 * * * * *',
     onTick: function() {
         console.log('cronTime: ', this.cronTime.source)

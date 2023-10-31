@@ -1,6 +1,6 @@
 const CronJob = require('cron').CronJob;
 
-new CronJob({
+new CronJob.from({
     cronTime: '*/10 * * * * *',
     onTick: function() {
         console.log('You will see this message every 10 seconds till the timeout executes');

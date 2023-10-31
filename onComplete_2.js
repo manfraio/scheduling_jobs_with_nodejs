@@ -9,7 +9,7 @@ function task(onComplete) {
     }   
 }
 
-const job = new CronJob({
+const job = new CronJob.from({
     cronTime: '*/10 * * * * *',
     onTick: task,
     onComplete: function() {

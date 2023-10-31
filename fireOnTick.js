@@ -6,7 +6,7 @@ function newOnTick() {
     console.log('This is a new message, you will see every 10 seconds!');
 }
 
-const job = new CronJob({
+const job = new CronJob.from({
     cronTime: '*/10 * * * * *',
     onTick: function() {
         console.log('You will see this message every 10 seconds');
@@ -15,7 +15,7 @@ const job = new CronJob({
 
 job.start();
 
-new CronJob({
+new CronJob.from({
     cronTime: '*/10 * * * * *',
     onTick: function() {
         counter++;

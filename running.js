@@ -2,7 +2,7 @@ const CronJob = require('cron').CronJob;
 
 let counter = 0;
 
-const job = new CronJob({
+const job = new CronJob.from({
     cronTime: '*/10 * * * * *',
     onTick: function() {
         console.log('You will see this message every 10 seconds');
@@ -11,7 +11,7 @@ const job = new CronJob({
 
 job.start();
 
-new CronJob({
+new CronJob.from({
     cronTime: '*/20 * * * * *',
     onTick: function() {
         counter++;

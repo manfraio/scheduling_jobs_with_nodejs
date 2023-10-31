@@ -10,7 +10,7 @@ otherContext.name = 'John Doe';
 otherContext.email = 'email@domain.com';
 otherContext.someOtherVariable = 'testing...';
 
-new CronJob({
+new CronJob.from({
     cronTime: '*/10 * * * * *',
     onTick: function() {
         console.log(this);
@@ -18,7 +18,7 @@ new CronJob({
     start: true
 });
 
-new CronJob({
+new CronJob.from({
     cronTime: '*/10 * * * * *',
     onTick: function() {
         console.log(this);
